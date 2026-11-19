@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="layout">
+
+    <!-- LEFT SIDE: the form -->
+    <form class="editor" id="editor">
+      <h1>Resume Builder</h1>
+      <p class="hint">Type on the left, see your resume on the right.</p>
+
+      <label>Full name
+        <input type="text" id="name" value="Aman Sharma">
+      </label>
+      <label>Role or course
+        <input type="text" id="title" value="B.Tech CSE, First Year">
+      </label>
+      <label>Email
+        <input type="email" id="email" value="aman@example.com">
+      </label>
+      <label>Phone
+        <input type="text" id="phone" value="+91 98765 43210">
+      </label>
+      <label>About you
+        <textarea id="summary" rows="3">Curious first-year student who enjoys building small web projects and solving problems.</textarea>
+      </label>
+      <label>Skills (separate with commas)
+        <input type="text" id="skills" value="HTML, CSS, JavaScript, C, Teamwork">
+      </label>
+      <label>Education (one per line)
+        <textarea id="education" rows="3">B.Tech CSE, Your College, 2026 to 2030
+Class 12, Your School, 92%</textarea>
+      </label>
+      <label>Projects (one per line)
+        <textarea id="projects" rows="3">Attendance Calculator: shows how many classes I can skip
+Habit Tracker: saves daily streaks using localStorage</textarea>
+      </label>
+      <label>Accent color
+        <input type="color" id="color" value="#0f766e">
+      </label>
+
+      <button type="button" id="printBtn">Print or save as PDF</button>
+    </form>
+
+    <!-- RIGHT SIDE: the resume preview -->
+    <main class="resume" id="resume">
+      <header>
+        <h2 id="outName"></h2>
+        <p id="outTitle" class="role"></p>
+        <p id="outContact" class="contact"></p>
+      </header>
+
+      <section>
+        <h3>About</h3>
+        <p id="outSummary"></p>
+      </section>
+
+      <section>
+        <h3>Skills</h3>
+        <ul id="outSkills" class="tags"></ul>
+      </section>
+
+      <section>
+        <h3>Education</h3>
+        <ul id="outEducation"></ul>
+      </section>
+
+      <section>
+        <h3>Projects</h3>
+        <ul id="outProjects"></ul>
+      </section>
+    </main>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
